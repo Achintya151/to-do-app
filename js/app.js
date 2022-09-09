@@ -46,7 +46,7 @@ const render = () => {
     ul.innerHTML = "";
 
     if (todos === null) {
-        const noData = "no data found";
+        const noData = "No data found.";
         // console.log(noData);
         const li = document.createElement('li');
         li.innerText = noData;
