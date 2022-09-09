@@ -56,7 +56,7 @@ const render = () => {
             const li = document.createElement('li');
             // li.innerText = item.title;
             li.innerHTML = `
-            <li class="flex justify-between py-2"><span>${item.title}</span><button for="my-modal-3"  class="btn btn-sm btn-circle text-right">✕</button></li>
+            <li class="flex justify-between py-2"><span>${item.title}</span><button for="my-modal-3" onClick="deleteItem()" class="btn btn-sm btn-circle text-right">✕</button></li>
             `
             ul.appendChild(li);
         });
@@ -73,17 +73,17 @@ const handleClearAll = () => {
     render();
 }
 
-// function deleteItem() {
-//     event.target.parentElement.remove();
+function deleteItem() {
+    event.target.parentElement.remove();
 
-//     let someArray = JSON.parse(localStorage.getItem('TODOS'));
-//     someArray = someArray.slice(0, x).concat(someArray.slice(-x));
+    // let someArray = JSON.parse(localStorage.getItem('TODOS'));
+    // someArray = someArray.slice(0, x).concat(someArray.slice(-x));
 
 
-//     // localStorage.removeItem('TODOS');
+    // localStorage.removeItem('TODOS');
 
-//     render();
-// };
+    render();
+};
 
 render();
 
