@@ -54,7 +54,10 @@ const render = () => {
     } else {
         todos.forEach((item) => {
             const li = document.createElement('li');
-            li.innerText = item.title;
+            // li.innerText = item.title;
+            li.innerHTML = `
+            <li class="flex justify-between"><span>${item.title}</span><label for="my-modal-3" class="btn btn-sm btn-circle text-right">✕</label></li>
+            `
             ul.appendChild(li);
         });
     };
