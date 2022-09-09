@@ -3,6 +3,8 @@ const getElement = (id) => {
     return element;
 }
 
+// PLUS BUTTON 
+
 const handleSubmit = () => {
     // const input = document.getElementById('todo-text');
 
@@ -38,16 +40,25 @@ const handleSubmit = () => {
 
 const render = () => {
     const todos = JSON.parse(localStorage.getItem("TODOS"));
-    console.log(todos);
+    // console.log(todos);
     const ul = getElement('todo-list');
 
-    // const li = document.createElement('li');
-    // // li.innerText = '';
-    // li.innerText = inputText;
-    // ul.appendChild(li);
+    todos.forEach((item) => {
+        const li = document.createElement('li');
+        li.innerText = item.title;
+        ul.appendChild(li);
+    });
+
 };
 
 render();
+
+// MINUS BUTTON 
+
+const handleClearAll = () => {
+    localStorage.removeItem("TODOS");
+    render();
+}
 
 
     // const todoList = [
