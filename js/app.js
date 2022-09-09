@@ -43,15 +43,25 @@ const render = () => {
     // console.log(todos);
     const ul = getElement('todo-list');
 
-    todos.forEach((item) => {
+    ul.innerHTML = "";
+
+    if (todos === null) {
+        const noData = "no data found";
+        // console.log(noData);
         const li = document.createElement('li');
-        li.innerText = item.title;
+        li.innerText = noData;
         ul.appendChild(li);
-    });
+    } else {
+        todos.forEach((item) => {
+            const li = document.createElement('li');
+            li.innerText = item.title;
+            ul.appendChild(li);
+        });
+    };
 
 };
 
-render();
+
 
 // MINUS BUTTON 
 
@@ -59,6 +69,8 @@ const handleClearAll = () => {
     localStorage.removeItem("TODOS");
     render();
 }
+
+render();
 
 
     // const todoList = [
@@ -73,7 +85,7 @@ const handleClearAll = () => {
     // const ul = getElement('todo-list');
 
     // const li = document.createElement('li');
-    // // li.innerText = '';
+    // // li.innerText = ''; * hobe ul
     // li.innerText = inputText;
     // ul.appendChild(li);
 
