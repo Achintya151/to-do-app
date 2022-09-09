@@ -56,7 +56,7 @@ const render = () => {
             const li = document.createElement('li');
             // li.innerText = item.title;
             li.innerHTML = `
-            <li class="flex justify-between"><span>${item.title}</span><label for="my-modal-3" class="btn btn-sm btn-circle text-right">✕</label></li>
+            <li class="flex justify-between py-2"><span>${item.title}</span><button for="my-modal-3"  class="btn btn-sm btn-circle text-right">✕</button></li>
             `
             ul.appendChild(li);
         });
@@ -73,9 +73,74 @@ const handleClearAll = () => {
     render();
 }
 
+// function deleteItem() {
+//     event.target.parentElement.remove();
+
+//     let someArray = JSON.parse(localStorage.getItem('TODOS'));
+//     someArray = someArray.slice(0, x).concat(someArray.slice(-x));
+
+
+//     // localStorage.removeItem('TODOS');
+
+//     render();
+// };
+
 render();
 
+// trying to add delete button
 
+// let storage1 = (function () {
+//     const inputText = getElement('todo-text').value;
+//     const todoList = [
+//         {
+//             title: inputText,
+//             completed: false,
+//         },
+//     ];
+
+//     return class storage1 {
+//         constructor(title, completed) {
+//             this[title] = todoList.title;
+//             this[completed] = todoList.completed;
+//         }
+
+
+//     }
+// }());
+
+// const deleteItem = () => {
+//     event.target.parentElement.remove();
+//     let a = event.target.parentElement.innerText;
+//     let word = a.split(' ');
+//     let item = new Array();
+//     let i = 0;
+//     let todos = JSON.parse(localStorage.getItem("TODOS"));
+//     window.localStorage.removeItem('TODOS');
+
+//     todos.forEach(val => {
+//         if (val.title === word[0]) {
+//             // console.log(val.title);
+//             const noData = "No data found.";
+//             // console.log(noData);
+//             const li = document.createElement('li');
+//             li.innerText = noData;
+//             ul.appendChild(li);
+//         }
+//         else {
+//             item[i] = new storage1(val.title, val.completed);
+//             i++;
+//         }
+//     });
+//     window.localStorage.setItem('TODOS', JSON.stringify(item));
+//     todos = [];
+//     // return;
+// }
+
+
+
+
+
+// rough
     // const todoList = [
     //     {
     //         title: inputText,
