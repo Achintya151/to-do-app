@@ -82,7 +82,7 @@ function deleteItem() {
 
     // localStorage.removeItem('TODOS');
 
-    render();
+    return;
 };
 
 render();
