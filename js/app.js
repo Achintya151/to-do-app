@@ -3,6 +3,10 @@ const getElement = (id) => {
     return element;
 }
 
+const clearField = () => {
+    getElement('todo-text').value = "";
+}
+
 // PLUS BUTTON 
 
 const handleSubmit = () => {
